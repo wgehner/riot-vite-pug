@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riot, Vite and Pug</title>
+  <script type="module">
+    /** Load BeerCSS **/
+    import "beercss";
+  </script>
+</head>
+<body>
+  <header class="container top">
+    <h1>Welcome to Riot, Vite and Pug</h1>
+  </header>
+
+  <main class="container center">
+    <p>This is a simple webpage built with Riot, Vite and Pug</p>
+    <section class="card small round border padding">
+      <h2>Riot Component Here:</h2>
+      
+      <c-label></c-label>
+    </section>
+    <button class="button primary extra">Riot, Vite and Pug!</button>
+  </main>
+
+  <footer class="container bottom">
+    <p>&copy; 2024 Your Name or Company</p>
+  </footer>
+
+  <script type="module">
+    
+    /** Load riot.js **/
+    import * as riot from 'riot'
+    import cLabel from './c-label.riot'
+    console.log('sub1')
+
+    var mymodel = {firstname: 'Wolfgang', lastname: 'Gehner'}
+  
+    riot.register('c-label', cLabel)
+    riot.mount('c-label', mymodel)
+
+  </script>
+</body>
+</html>
+

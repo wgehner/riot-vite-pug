@@ -1,0 +1,68 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  vertical-align: middle;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border-radius: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--on-surface);
+  background-color: var(--surface);
+  overflow-x: hidden;
+}
+
+label {
+  font-size: 0.75rem;
+  vertical-align: baseline;
+}
+
+a,
+b,
+i,
+span,
+strong {
+  vertical-align: bottom;
+}
+
+a,
+button,
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  font-family: inherit;
+  outline: inherit;
+  justify-content: center;
+}
+
+a,
+button,
+.button,
+i,
+label {
+  user-select: none;
+}
+
+body ::-webkit-scrollbar,
+body ::-webkit-scrollbar-thumb,
+body ::-webkit-scrollbar-button {
+  background: none;
+  inline-size: 0.4rem;
+  block-size: 0.4rem;
+}
+
+body :is(:hover,:focus)::-webkit-scrollbar-thumb {
+  background: var(--outline);
+  border-radius: 1rem;
+}
+
+pre,
+code {
+  direction: ltr;
+}

@@ -1,0 +1,25 @@
+c-label
+    button
+        i home
+        span MYLABEL {state.firstname}
+    script.
+        console.log('MYLABEL')
+        export default {
+
+            mydata: 'mydata',
+
+            onMounted() {
+                this.state = this.props
+                console.log(JSON.stringify(this.state))
+                this.update()
+            },
+            
+            onBeforeUpdate(props, state) {
+                // allows recalculation of context data before the update
+                console.log('onBeforeUpdate')
+            },
+            onUpdated() {
+                // right after the component template is updated after an update call
+                console.log('onUpdated')
+            }
+        }
