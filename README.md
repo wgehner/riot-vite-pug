@@ -2,7 +2,9 @@ initial with npm install
 
 run with npm run dev
 
-Component does not work yet when written in pug. To test:
+Component does not work yet when written in pug. Run fails with 'Premature end of file' error.
+
+To reproduce:
 
 replace src/c-label.riot contents with src/c-label.riot.pug
 
